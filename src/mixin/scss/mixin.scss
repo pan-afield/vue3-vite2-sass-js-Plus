@@ -1,0 +1,19 @@
+/*
+    多行省略
+*/ 
+@mixin ellipsis ($line) {
+    display: -webkit-box; // 必须结合的属性 ，将对象作为弹性伸缩盒子模型显示
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical; //必须结合的属性 ，设置或检索伸缩盒对象的子元素的排列方式
+    -webkit-line-clamp: $line; //用来限制在一个块元素显示的文本的行数
+    overflow: hidden;
+}
+
+/*
+    单行省略
+*/ 
+@mixin singleEllipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
